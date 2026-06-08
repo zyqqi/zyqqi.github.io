@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能力全景 · 张雅琦作品集</title>
+<meta name="description" content="张雅琦 · 五维能力 · 操作工具 · 个人能力 · GIS · 方法论">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./能力全景_浅色版_files/css2" rel="stylesheet">
+<style>
+  :root{--black:#1C1711;--bg2:#2A231B;--red:#C1121F;--red-br:#e0464f;--red-deep:#7C0A14;--white:#FAFAF8;--muted:#8a8884;--ink:#e8e6e2;--cn:'Noto Sans SC',sans-serif;--en:'Archivo',sans-serif;--serif:'Noto Serif SC',serif;--mono:'JetBrains Mono',monospace;
+    --panel:rgba(193,18,31,.055);--panel-bd:rgba(193,18,31,.42);--panel-bd-hi:rgba(224,70,79,.85);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--cn);color:#e8e6e2;background:#251c1c;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+
+  /* ===== 导航 ===== */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,48px);height:56px;background:rgba(28,23,17,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(193,18,31,.18);}
+  .nav-logo{font-family:var(--en);font-weight:800;font-size:15px;color:#fff;letter-spacing:3px;}
+  .nav-logo span{color:var(--red);}
+  .nav-links{display:flex;gap:clamp(18px,3vw,40px);}
+  .nav-links a{color:#9a9a9a;font-size:13px;letter-spacing:3px;transition:color .3s;}
+  .nav-links a:hover,.nav-links a.active{color:#fff;}
+  .nav-links a.active{border-bottom:2px solid var(--red);padding-bottom:2px;}
+  .nav-cv{font-family:var(--en);font-size:11px;letter-spacing:2px;color:#fff;background:transparent;border:1px solid rgba(193,18,31,.5);padding:6px 16px;cursor:pointer;transition:.3s;}
+  .nav-cv:hover{border-color:var(--red);background:rgba(193,18,31,.2);}
+  .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;}
+
+  /* ===== 区块外壳 ===== */
+  section{position:relative;}
+  .sk{padding:44px 0;scroll-margin-top:60px;position:relative;overflow:hidden;}
+  .sk-inner{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,52px);position:relative;z-index:2;}
+  /* 技术网格 / 红色辉光（仅纹理，不区分配色） */
+  .grid-tex::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 71px,rgba(255,255,255,.022) 71px 72px),repeating-linear-gradient(0deg,transparent 0 71px,rgba(255,255,255,.022) 71px 72px);pointer-events:none;z-index:1;}
+  .glow-tl::after{content:'';position:absolute;top:-120px;left:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(193,18,31,.2),transparent 70%);pointer-events:none;z-index:0;}
+  .glow-br::after{content:'';position:absolute;bottom:-140px;right:-120px;width:460px;height:460px;background:radial-gradient(circle,rgba(124,10,20,.26),transparent 70%);pointer-events:none;z-index:0;}
+
+  /* ===== 文字层级（参考 Image 13/14） ===== */
+  .sk-head{margin-bottom:clamp(30px,3.6vw,50px);}
+  .kicker{display:inline-flex;align-items:center;gap:11px;font-family:var(--en);font-size:11px;letter-spacing:5px;color:var(--red-br);font-weight:700;text-transform:uppercase;margin-bottom:14px;}
+  .kicker::before{display:none;}
+  .sk-row{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .sk-num{font-family:var(--en);font-weight:900;font-size:clamp(43px,3.2vw,50px);line-height:.85;color:rgba(255,255,255,.09);letter-spacing:-2px;}
+  .sk-title{font-family:var(--serif);font-size:clamp(43px,3.2vw,50px);font-weight:900;letter-spacing:3px;color:#fff;}
+  .sk-en{font-family:var(--en);font-size:clamp(10px,.9vw,13px);letter-spacing:6px;color:var(--muted);margin-top:8px;text-transform:uppercase;}
+  .sk-desc{font-size:14px;line-height:2;color:#a3a09a;max-width:min(700px,100%);margin-top:14px;}
+  .sk-desc b{color:var(--red-br);font-weight:500;}
+
+  /* ===== 红框占位（Image 13：红框 + 透明红填充 + 角标） ===== */
+  .ph{position:relative;background:var(--panel);border:1px solid var(--panel-bd);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.34);font-size:10px;letter-spacing:2px;overflow:hidden;text-align:center;padding:16px;transition:border-color .35s ease;}
+  .ph::before,.ph::after{content:'';position:absolute;width:14px;height:14px;border:2px solid rgba(224,70,79,.8);z-index:3;pointer-events:none;}
+  .ph::before{top:9px;left:9px;border-right:0;border-bottom:0;}
+  .ph::after{bottom:9px;right:9px;border-left:0;border-top:0;}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+  .ph .ph-tag{position:absolute;top:9px;right:12px;z-index:2;font-family:var(--mono);font-size:8.5px;letter-spacing:1px;color:rgba(224,70,79,.85);font-weight:500;}
+
+  /* ===== HERO ===== */
+  .page-hero{background:var(--black);color:#fff;padding:clamp(104px,12vw,150px) 24px clamp(46px,6vw,72px);text-align:center;position:relative;overflow:hidden;}
+  .page-hero .grid-tex::before{z-index:1;}
+  .ph-inner{position:relative;z-index:2;max-width:940px;margin:0 auto;}
+  .ph-eyebrow{display:inline-flex;align-items:center;gap:11px;font-family:var(--en);font-size:12px;letter-spacing:7px;color:var(--red-br);font-weight:700;margin-bottom:20px;}
+  .ph-eyebrow::before,.ph-eyebrow::after{display:none;}
+  .ph-title{font-family:var(--serif);font-size:clamp(75px,7vw,75px);font-weight:900;letter-spacing:6px;position:relative;display:inline-block;}
+  .ph-title::before{content:attr(data-text);position:absolute;left:-182px;top:-16px;color:transparent;-webkit-text-stroke:1.2px var(--red-deep);opacity:.45;z-index:-1;}
+  .ph-en{font-family:var(--en);font-size:clamp(12px,1.2vw,15px);letter-spacing:10px;color:rgba(255,255,255,.28);margin-top:14px;}
+  .ph-sub{font-size:13.5px;color:#9a9a9a;line-height:2;margin-top:22px;letter-spacing:1px;}
+  .ph-sub b{color:#fff;font-family:var(--en);font-size:1.25em;}
+  /* 顶部统计条（技术感数据栏，借鉴 Image 13） */
+  .hero-stats{display:flex;justify-content:center;gap:0;margin-top:34px;flex-wrap:wrap;}
+  .hs{padding:0 clamp(20px,3vw,40px);border-right:1px solid rgba(193,18,31,.3);}
+  .hs:last-child{border-right:0;}
+  .hs .v{font-family:var(--en);font-weight:900;font-size:clamp(22px,2.6vw,30px);color:var(--red-br);}
+  .hs .l{font-family:var(--mono);font-size:9.5px;letter-spacing:2px;color:var(--muted);margin-top:4px;text-transform:uppercase;}
+
+  /* ===== 01 雷达 ===== */
+  .radar-wrap{display:flex;align-items:center;justify-content:space-between;gap:clamp(36px,5vw,72px);flex-wrap:wrap;}
+  .radar-chart{width:clamp(240px,40vw,480px);flex:0 0 auto;margin-top:clamp(20px,3vw,40px);}
+  .radar-chart svg{width:100%;height:auto;}
+  .radar-info{flex:1 1 380px;min-width:300px;}
+  .radar-info p{font-size:13.5px;color:#a3a09a;line-height:2;margin-bottom:18px;max-width:min(520px,100%);}
+  .ri-bars{border:1px solid var(--panel-bd);background:var(--panel);padding:clamp(18px,2vw,26px);}
+  .ri-bar{display:flex;align-items:center;gap:13px;padding:9px 0;border-bottom:1px dashed rgba(193,18,31,.18);}
+  .ri-bar:last-child{border-bottom:0;}
+  .ri-bar .lb{font-size:13px;width:52px;flex:0 0 auto;color:#e8e6e2;letter-spacing:1px;}
+  .ri-bar .track{flex:1;height:7px;background:rgba(255,255,255,.06);overflow:hidden;}
+  .ri-bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--red-deep),var(--red-br));transition:width 1.2s cubic-bezier(.2,.8,.2,1);}
+  .ri-bar .v{font-family:var(--en);font-weight:800;font-size:14px;color:var(--red-br);width:28px;text-align:right;}
+
+  /* ===== 详情小节标头 ===== */
+  .detail-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid rgba(193,18,31,.35);padding-bottom:12px;margin:clamp(42px,5vw,66px) 0 26px;}
+  .detail-head .t{font-family:var(--serif);font-size:clamp(17px,1.9vw,23px);font-weight:900;letter-spacing:2px;color:#fff;}
+  .detail-head .e{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--red-br);}
+  .detail-head .idx{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:1px;}
+
+  /* ===== 02 工具总览（4×2 红框卡） ===== */
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .tool-card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--panel-bd);overflow:hidden;cursor:pointer;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;position:relative;}
+  .tool-card::after{content:'';position:absolute;right:-22px;top:-22px;width:70px;height:70px;border:1px solid rgba(193,18,31,.35);border-radius:50%;pointer-events:none;}
+  .tool-card:hover{transform:translateY(-6px);border-color:var(--panel-bd-hi);box-shadow:0 16px 40px -18px rgba(193,18,31,.5);}
+  .tc-top{padding:14px 16px 12px;}
+  .tc-cat{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red-br);font-weight:500;margin-bottom:7px;}
+  .tc-abbr{font-family:var(--en);font-weight:900;font-size:clamp(28px,3vw,38px);color:#fff;line-height:.95;letter-spacing:1px;}
+  .tc-body{padding:0 16px 15px;display:flex;flex-direction:column;flex:1;}
+  .tc-name{font-family:var(--en);font-weight:700;font-size:12.5px;letter-spacing:.5px;color:#cfcdc8;margin-bottom:6px;}
+  .tc-tagline{font-size:11.5px;line-height:1.7;color:#928f8a;margin-bottom:12px;flex:1;}
+  .tc-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:11px;}
+  .tc-bar-wrap{flex:1;height:5px;background:rgba(255,255,255,.07);overflow:hidden;}
+  .tc-bar{height:100%;width:0;background:linear-gradient(90deg,var(--red-deep),var(--red-br));transition:width 1.1s cubic-bezier(.2,.8,.2,1);}
+  .tc-pct{font-family:var(--en);font-weight:800;font-size:12px;color:var(--red-br);}
+  .tc-jump{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);border-top:1px solid rgba(193,18,31,.22);padding-top:10px;transition:color .3s;}
+  .tool-card:hover .tc-jump{color:var(--red-br);}
+  .tc-jump svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ===== 工具详情（交错布局 + 多样图集） ===== */
+  .tool-detail{scroll-margin-top:74px;display:grid;grid-template-columns:minmax(280px,37%) 1fr;gap:clamp(24px,3.4vw,52px);align-items:center;padding:clamp(30px,3.8vw,52px) 0;border-top:1px dashed rgba(193,18,31,.2);}
+  .tool-detail:first-of-type{border-top:0;}
+  .tool-detail .td-text{order:1;}
+  .tool-detail .gal{order:2;}
+  .tool-detail.rev{grid-template-columns:1fr minmax(280px,37%);}
+  .tool-detail.rev .td-text{order:2;}
+  .tool-detail.rev .gal{order:1;}
+  .td-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--red-br);font-weight:500;margin-bottom:10px;}
+  .td-abbr{font-family:var(--en);font-weight:900;font-size:clamp(54px,7.5vw,92px);line-height:1;letter-spacing:1px;margin-bottom:8px;background:repeating-linear-gradient(45deg,rgb(255,255,255) 0 5px,#f2e6e6 5px 10px);background-clip:text;-webkit-text-fill-color:transparent;color:#00000000;filter:drop-shadow(0 2px 7px rgba(0,0,0,.45));}
+  .td-zh{font-family:var(--serif);font-size:clamp(24px,3.2vw,50px);font-weight:900;letter-spacing:3px;color:#fff;}
+  .td-en{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);margin:6px 0 18px;}
+  .td-essence{font-family:var(--serif);font-size:27.5px;line-height:1.85;color:rgba(238,143,148,.85);font-weight:600;border-left:0 solid var(--red);background:var(--panel);padding:12px 16px;margin-bottom:16px;}
+  .td-desc{font-size:13px;line-height:2.05;color:#a3a09a;margin-bottom:18px;}
+  .td-caps{display:flex;flex-wrap:wrap;gap:0;margin-bottom:15px;font-family:var(--en);}
+  .td-caps span{font-size:11.5px;letter-spacing:1px;color:#fff;font-weight:600;padding-right:14px;margin-right:14px;border-right:1px solid rgba(193,18,31,.4);}
+  .td-caps span:last-child{border-right:0;margin-right:0;padding-right:0;}
+  .td-apps{display:flex;flex-wrap:wrap;gap:8px;}
+  .td-apps span{font-family:var(--mono);font-size:10.5px;letter-spacing:.5px;color:var(--red-br);background:rgba(193,18,31,.08);border:1px solid rgba(193,18,31,.35);padding:4px 11px;}
+  /* 图集布局变体 g1–g4 */
+  .gal{display:grid;gap:12px;width:100%;}
+  .gal.g1{grid-template-columns:1fr 1fr;}
+  .gal.g1 .ph:nth-child(1){grid-column:1/-1;aspect-ratio:16/7;}
+  .gal.g1 .ph{aspect-ratio:1/1;}
+  .gal.g2{grid-template-columns:1fr 1fr;}
+  .gal.g2 .ph{aspect-ratio:1/1;}
+  .gal.g2 .ph:nth-child(3){grid-column:1/-1;aspect-ratio:16/7;}
+  .gal.g3{grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;}
+  .gal.g3 .ph:nth-child(1){grid-row:1/3;}
+  .gal.g3 .ph:nth-child(2),.gal.g3 .ph:nth-child(3){min-height:160px;}
+  .gal.g4{grid-template-columns:repeat(3,1fr);}
+  .gal.g4 .ph{aspect-ratio:3/4;}
+  /* ===== 工具图集：按上传参考图定制布局 ===== */
+  /* Python（gpy）：单张大图，约 2:1 */
+  .gal.gpy{grid-template-columns:1fr;}
+  .gal.gpy .ph{aspect-ratio:3/2;}
+  /* SU（gsu）：左侧通高 + 右侧上下两张 + 底部两张（共 5 张） */
+  .gal.gsu{grid-template-columns:repeat(12,1fr);}
+  .gal.gsu .ph:nth-child(1){grid-column:1/8;grid-row:1/3;}
+  .gal.gsu .ph:nth-child(2){grid-column:8/13;grid-row:1;min-height:clamp(140px,17vw,175px);}
+  .gal.gsu .ph:nth-child(3){grid-column:8/13;grid-row:2;min-height:clamp(140px,17vw,175px);}
+  .gal.gsu .ph:nth-child(4){grid-column:1/7;grid-row:3;min-height:clamp(175px,21vw,225px);}
+  .gal.gsu .ph:nth-child(5){grid-column:7/13;grid-row:3;min-height:clamp(175px,21vw,225px);}
+  /* PS（gps）：左侧通高 + 右侧上下两张 + 底部三张（共 6 张） */
+  .gal.gps{grid-template-columns:repeat(12,1fr);}
+  .gal.gps .ph:nth-child(1){grid-column:1/8;grid-row:1/3;}
+  .gal.gps .ph:nth-child(2){grid-column:8/13;grid-row:1;min-height:clamp(130px,15vw,160px);}
+  .gal.gps .ph:nth-child(3){grid-column:8/13;grid-row:2;min-height:clamp(130px,15vw,160px);}
+  .gal.gps .ph:nth-child(4){grid-column:1/5;grid-row:3;min-height:clamp(150px,18vw,190px);}
+  .gal.gps .ph:nth-child(5){grid-column:5/9;grid-row:3;min-height:clamp(150px,18vw,190px);}
+  .gal.gps .ph:nth-child(6){grid-column:9/13;grid-row:3;min-height:clamp(150px,18vw,190px);}
+
+  /* ===== 03 个人能力（卡 + 文上图下图集） ===== */
+  .ps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .ps-card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--panel-bd);overflow:hidden;cursor:pointer;transition:transform .35s ease,border-color .35s ease;}
+  .ps-card:hover{transform:translateY(-6px);border-color:var(--panel-bd-hi);}
+  .ps-top{padding:14px 16px 12px;}
+  .ps-cat{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red-br);font-weight:500;margin-bottom:7px;}
+  .ps-name{font-size:clamp(16px,1.8vw,20px);font-weight:700;letter-spacing:2px;color:#fff;}
+  .ps-body{padding:0 16px 15px;display:flex;flex-direction:column;flex:1;}
+  .ps-en{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:9px;}
+  .ps-tagline{font-size:11.5px;line-height:1.7;color:#928f8a;margin-bottom:12px;flex:1;}
+  .ps-jump{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--muted);border-top:1px solid rgba(193,18,31,.22);padding-top:10px;transition:color .3s;}
+  .ps-card:hover .ps-jump{color:var(--red-br);}
+  .ps-jump svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .ps-detail{scroll-margin-top:74px;padding:clamp(28px,3.6vw,50px) 0;border-top:1px dashed rgba(193,18,31,.2);}
+  .ps-detail:first-of-type{border-top:0;}
+  .psd-grid{display:grid;grid-template-columns:minmax(260px,32%) 1fr;gap:clamp(24px,3.2vw,48px);align-items:start;}
+  .psd-grid.rev{grid-template-columns:1fr minmax(260px,32%);}
+  .psd-grid.psd-stack{grid-template-columns:1fr;}
+  .psd-grid.rev .psd-text{order:2;}
+  .psd-grid.rev .psd-gal{order:1;}
+  .psd-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--red-br);margin-bottom:10px;}
+  .psd-zh{font-family:var(--serif);font-size:clamp(24px,2.8vw,34px);font-weight:900;letter-spacing:3px;color:#ff888f;}
+  .psd-en{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);margin:6px 0 16px;}
+  .psd-essence{font-family:var(--serif);font-size:22px;color:#fff;font-weight:600;border-left:0 solid var(--red);background:var(--panel);padding:11px 15px;margin-bottom:14px;}
+  .psd-desc{font-size:13px;line-height:2.05;color:#a3a09a;}
+  .collage{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(128px,auto);gap:12px;}
+  .collage .ph.big{grid-column:span 2;grid-row:span 2;}
+  .collage .ph.wide{grid-column:span 2;min-height:190px;}
+  .photos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .photos .ph{aspect-ratio:2/3;}
+  /* 演讲与协作：占位图整体下移一些（新增，仅作用于该页图集） */
+  #p-speak .photos{margin-top:clamp(28px,3.4vw,48px);}
+  /* 大图图集（总平面图 / 鸟瞰图）：弹性流式排布，按比例不同设宽，使各图占用面积大致相等 */
+  .biggrid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:flex-start;}
+  .biggrid .ph{flex:0 0 auto;}
+  .biggrid .ar916{width:28.5%;aspect-ratio:1389/1964;}
+  .biggrid .ar916l{width:50%;aspect-ratio:1389/1964;}
+  .biggrid .ar53{width:49%;aspect-ratio:5/3;}
+  .biggrid .ar43{width:44%;aspect-ratio:4/3;}
+  .biggrid .ar7016w49{width:49%;aspect-ratio:7016/4961;}
+  .biggrid .ar7016w44{width:44%;aspect-ratio:7016/4961;}
+  .biggrid .ar916c{width:28.5%;aspect-ratio:1389/1964;}
+
+  
+
+  /* ===== 04 AI 协作 ===== */
+  .ai-wrap{display:grid;grid-template-columns:0.961fr 2.047fr 2.533fr;gap:clamp(10px,1.2vw,14px);align-items:stretch;}
+  .ai-text p{font-size:13px;color:#a3a09a;line-height:2.05;}
+  .ai-block{margin-top:18px;}
+  .ai-block .h{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--red-br);margin-bottom:7px;display:flex;align-items:center;gap:9px;}
+  .ai-block .h::before{display:none;}
+  /* AI 协作图集：文字占满整行，三张占位图按比例排列（等高） */
+  .ai-text{grid-column:1/4;grid-row:1;}
+  .ai-g-before{grid-column:1;grid-row:2;aspect-ratio:1621/1687;}
+  .ai-g-concept{grid-column:2;grid-row:2;aspect-ratio:1621/792;}
+  .ai-g-render{grid-column:3;grid-row:2;aspect-ratio:1621/640;}
+  .ai-flow{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--panel-bd);background:var(--panel);}
+  .ai-step{padding:16px 18px;border-right:1px solid rgba(193,18,31,.25);position:relative;}
+  .ai-step:last-child{border-right:0;}
+  .ai-step .n{font-family:var(--mono);font-size:10px;color:var(--red-br);letter-spacing:1px;}
+  .ai-step .s{font-size:13px;color:#fff;font-weight:700;margin-top:6px;letter-spacing:1px;}
+  .ai-step .d{font-size:11px;color:#928f8a;margin-top:5px;line-height:1.6;}
+
+  /* ===== 05 GIS（非对称图集 + 数据面板） ===== */
+  .gis-wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(20px,2.6vw,36px);align-items:stretch;}
+  .gis-main{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.3fr 1fr;gap:13px;}
+  .gis-main .ph:nth-child(1){grid-column:1/-1;}
+  .gis-side{border:1px solid var(--panel-bd);background:var(--panel);padding:clamp(18px,2vw,26px);display:flex;flex-direction:column;}
+  .gis-side .h{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--red-br);margin-bottom:4px;}
+  .gis-side .t{font-family:var(--serif);font-size:18px;font-weight:900;color:#fff;letter-spacing:1px;margin-bottom:16px;}
+  .gis-stat{padding:11px 0;border-bottom:1px dashed rgba(193,18,31,.18);}
+  .gis-stat:last-child{border-bottom:0;}
+  .gis-stat .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .gis-stat .nm{font-size:12px;color:#cfcdc8;letter-spacing:.5px;}
+  .gis-stat .pc{font-family:var(--en);font-weight:800;font-size:13px;color:var(--red-br);}
+  .gis-stat .bar{height:5px;background:rgba(255,255,255,.06);overflow:hidden;}
+  .gis-stat .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red-deep),var(--red-br));transition:width 1.1s cubic-bezier(.2,.8,.2,1);}
+  .gis-main .ph{min-height:120px;}
+
+  /* ===== 06 方法论（无图标 · 大编号红框） ===== */
+  .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .method-card{background:var(--panel);border:1px solid var(--panel-bd);padding:clamp(26px,2.8vw,38px) clamp(22px,2.2vw,30px);position:relative;overflow:hidden;transition:transform .35s ease,border-color .35s ease;}
+  .method-card:hover{transform:translateY(-6px);border-color:var(--panel-bd-hi);}
+  .mc-no{font-family:var(--en);font-weight:900;font-size:clamp(40px,4.4vw,60px);line-height:.85;color:rgba(224,70,79,.22);letter-spacing:-1px;margin-bottom:18px;}
+  .mc-tagcn{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--red-br);margin-bottom:10px;}
+  .mc-title{font-size:clamp(16px,1.6vw,20px);font-weight:700;letter-spacing:1px;color:#fff;margin-bottom:6px;}
+  .mc-en{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:2px;margin-bottom:15px;text-transform:uppercase;}
+  .mc-desc{font-size:12.5px;color:#9a9893;line-height:2;}
+
+
+  /* ===== 项目经历卡片 ===== */
+  .proj-cards{margin-top:28px;display:flex;flex-direction:column;gap:0;border-left:2px solid var(--red);padding-left:0;position:relative;}
+  .proj-cards::before{content:'PROJECT EXPERIENCE';position:absolute;top:-22px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--red-br);}
+  .proj-card{padding:18px 22px;border:1px solid rgba(193,18,31,.25);border-left:0;background:rgba(193,18,31,.04);position:relative;transition:background .3s ease;}
+  .proj-card:hover{background:rgba(193,18,31,.1);}
+  .proj-card::before{content:'';position:absolute;left:-8px;top:24px;width:12px;height:12px;border:2px solid var(--red-br);border-radius:50%;background:var(--black);}
+  .proj-card .pc-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .proj-card .pc-title{font-size:14px;font-weight:700;color:#fff;letter-spacing:.5px;flex:1 1 auto;}
+  .proj-card .pc-role{font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--red-br);border:1px solid rgba(193,18,31,.4);padding:2px 8px;white-space:nowrap;}
+  .proj-card .pc-date{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:1px;white-space:nowrap;}
+  .proj-card .pc-desc{font-size:12.5px;line-height:1.95;color:#a3a09a;}
+
+
+  /* ===== 章节快速跳转 ===== */
+  .sk-quicknav{display:flex;align-items:center;gap:0;margin-top:clamp(30px,3.5vw,46px);border:1px solid var(--panel-bd);background:var(--panel);overflow:hidden;}
+  .sk-quicknav a{flex:1;padding:14px 18px;font-size:12px;letter-spacing:1px;color:var(--muted);border-right:1px solid rgba(193,18,31,.22);transition:color .3s,background .3s;display:flex;align-items:center;gap:8px;}
+  .sk-quicknav a:last-child{border-right:0;}
+  .sk-quicknav a:hover{color:#fff;background:rgba(193,18,31,.12);}
+  .sk-quicknav .qn{font-family:var(--mono);font-size:10px;color:var(--red-br);font-weight:700;}
+  /* 顶部快速跳转：当前项(02) + 提示（新增） */
+  .sk-quicknav.qn-top{margin-top:0;margin-bottom:clamp(30px,3.5vw,46px);}
+  .sk-quicknav a.qn-current{color:#fff;background:rgba(193,18,31,.16);}
+  .sk-quicknav a.qn-current .qn{color:#fff;background:var(--red);padding:2px 6px;}
+  .sk-quicknav-tip{display:inline-flex;align-items:center;gap:11px;font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--red-br);font-weight:500;margin-bottom:14px;}
+  .sk-quicknav-tip::before{display:none;}
+
+
+  /* ===== 底部分区导航 ===== */
+  .sec-nav{position:fixed;bottom:0;left:0;right:0;z-index:94;display:flex;background:rgba(28,23,17,.94);backdrop-filter:blur(10px);border-top:2px solid var(--panel-bd);padding:0;transition:transform .4s ease;}
+  .sn{flex:1;display:flex;align-items:center;gap:8px;padding:14px 16px;font-size:13px;color:#888;letter-spacing:1px;border-right:1px solid rgba(193,18,31,.2);transition:all .3s ease;cursor:pointer;white-space:nowrap;}
+  .sn:last-child{border-right:0;}
+  .sn:hover{color:#fff;background:rgba(193,18,31,.1);}
+  .sn.active{color:#fff;background:rgba(193,18,31,.12);border-top:2px solid var(--red);margin-top:-2px;}
+  .sn-n{font-family:var(--mono);font-weight:700;font-size:12px;color:var(--red-br);}
+  .sn.active .sn-n{color:#fff;background:var(--red);padding:2px 6px;}
+  .sn-hint{flex:0 0 auto;display:flex;align-items:center;padding:14px 18px;font-family:var(--mono);font-size:10px;letter-spacing:2px;color:#fff;background:var(--red);border-right:1px solid rgba(193,18,31,.2);white-space:nowrap;}
+
+  /* ===== 左侧返回按钮（Image 9 风格） ===== */
+  .back-btn{position:fixed;left:0;top:50%;transform:translateY(-50%) translateX(-110%);z-index:96;display:flex;align-items:center;gap:14px;padding:11px 12px 11px 22px;border-radius:0 44px 44px 0;background:linear-gradient(90deg,#080808 0%,#262626 34%,#cfcfcf 82%,#fff 100%);box-shadow:0 14px 34px -10px rgba(0,0,0,.55);cursor:pointer;opacity:0;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s ease;}
+  .back-btn.show{transform:translateY(-50%) translateX(0);opacity:1;}
+  .back-btn .bb-label{font-family:var(--serif);font-size:14px;letter-spacing:2px;color:#fff;font-weight:600;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.45);}
+  .back-btn .bb-circle{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff,#dcdcdc);display:flex;align-items:center;justify-content:center;box-shadow:0 0 22px rgba(255,255,255,.85);flex:0 0 auto;}
+  .back-btn .bb-circle svg{width:18px;height:18px;stroke:#0a0a0a;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ===== 动画 ===== */
+  .fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+  .fade-up.visible{opacity:1;transform:translateY(0);}
+
+  /* ===== 页脚 ===== */
+  footer{background:#17120C;color:#fff;padding:64px clamp(20px,4vw,40px) 32px;border-top:1px solid rgba(255,255,255,.06);}
+  .footer-cta{text-align:center;margin-bottom:48px;}
+  .footer-cta .line{font-family:var(--serif);font-size:clamp(20px,3.4vw,32px);font-weight:600;color:#fff;letter-spacing:1px;margin-bottom:14px;}
+  .footer-cta .sub{font-size:13px;color:var(--muted);letter-spacing:1px;}
+  .footer-contact{max-width:760px;margin:0 auto 48px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
+  .fc-item{text-align:center;}
+  .fc-item .ic{font-size:22px;color:var(--red);margin-bottom:8px;}
+  .fc-item .lb{font-size:10px;color:#666;letter-spacing:2px;font-family:var(--en);margin-bottom:4px;}
+  .fc-item .vl{font-size:13px;color:#ccc;}
+  .footer-copyright{max-width:900px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);text-align:center;}
+  .copyright-zh{font-size:11px;color:#777;line-height:1.9;margin-bottom:12px;}
+  .copyright-zh strong{color:#aaa;font-weight:500;}
+  .copyright-en{font-size:10px;color:#555;line-height:1.8;font-family:var(--en);}
+
+  /* ===== 响应式 ===== */
+  @media(max-width:980px){
+    .tools-grid,.ps-grid{grid-template-columns:repeat(2,1fr);}
+    .tool-detail,.tool-detail.rev,.ai-wrap,.psd-grid,.psd-grid.rev{grid-template-columns:1fr;}
+    .ai-text,.ai-g-before,.ai-g-concept,.ai-g-render{grid-column:auto;grid-row:auto;}
+    .ai-flow{grid-template-columns:1fr 1fr;}
+    .ai-step:nth-child(2){border-right:0;}
+    .tool-detail .td-text,.tool-detail.rev .td-text,.tool-detail .gal,.tool-detail.rev .gal,.psd-grid.rev .psd-text,.psd-grid.rev .psd-gal{order:0;}
+  }
+  @media(max-width:768px){
+    nav{padding:0 20px;height:auto;flex-wrap:wrap;}
+    .nav-links{display:none;width:100%;flex-direction:column;gap:0;background:rgba(28,23,17,.98);border-top:1px solid rgba(193,18,31,.18);}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:14px 20px;border-bottom:1px solid rgba(193,18,31,.12);letter-spacing:2px;}
+    .nav-bar-row{display:flex;width:100%;height:56px;align-items:center;justify-content:space-between;}
+    .nav-toggle{display:block;}
+    .method-grid{grid-template-columns:1fr;}
+    .radar-wrap{flex-direction:column;}
+    .collage{grid-template-columns:repeat(2,1fr);}
+    .biggrid .ar916{width:47%;}
+    .biggrid .ar916l{width:70%;}
+    .biggrid .ar916c{width:47%;}
+    .biggrid .ar53,.biggrid .ar43,.biggrid .ar7016w49,.biggrid .ar7016w44{width:100%;}
+    .proj-card .pc-top{flex-direction:column;gap:5px;}
+    .sk-quicknav{flex-wrap:wrap;}
+    .sk-quicknav a{flex:1 1 45%;}
+    .sn-hint{display:none;}
+    .footer-contact{gap:28px;}
+    .back-btn .bb-label{font-size:12px;}
+    footer{padding:48px 20px 28px;}
+  }
+  @media(max-width:520px){
+    .ai-g-before,.ai-g-concept,.ai-g-render{aspect-ratio:16/10;min-height:0;}
+    .gal.gsu,.gal.gps{grid-template-columns:1fr 1fr;}
+    .gal.gsu .ph,.gal.gps .ph{grid-column:auto!important;grid-row:auto!important;min-height:0;aspect-ratio:4/3;}
+    .photos,.ai-flow{grid-template-columns:1fr;}
+    .ai-step{border-right:0;border-bottom:1px solid rgba(193,18,31,.25);}
+    .tools-grid,.ps-grid{grid-template-columns:1fr;}
+  }
+
+
+  /* ============================================================
+     LIGHT THEME OVERRIDE — 红色浅色系（v2）
+     Hero (.page-hero) 和 Nav 保持不变
+     ============================================================ */
+
+  /* --- 全局背景 & 文字 --- */
+  body{background:#fffef7;color:#3d3535;}
+
+  /* --- 区块外壳 (sections) --- */
+  .sk{background:#fffef7;}
+  .sk:nth-child(even){background:#fffbf5;}
+
+  /* 技术网格纹理 → 浅色线条 */
+  .grid-tex::before{background:repeating-linear-gradient(90deg,transparent 0 71px,rgba(180,50,60,.03) 71px 72px),repeating-linear-gradient(0deg,transparent 0 71px,rgba(180,50,60,.03) 71px 72px)!important;}
+
+  /* 红色辉光 → 降低强度，适配浅底 */
+  .glow-tl::after{background:radial-gradient(circle,rgba(193,18,31,.07),transparent 70%)!important;}
+  .glow-br::after{background:radial-gradient(circle,rgba(193,18,31,.06),transparent 70%)!important;}
+
+  /* --- 文字层级 --- */
+  .sk-title{color:#2a1f1f!important;}
+  .sk-num{color:rgba(193,18,31,.08)!important;}
+  .sk-en{color:#999!important;}
+  .sk-desc{color:#6a6060!important;}
+  .sk-desc b{color:var(--red)!important;}
+  .kicker{color:var(--red)!important;}
+
+  /* --- 面板 / 红框（框线加粗 2px） --- */
+  .ph{background:rgba(193,18,31,.04)!important;border:2px solid rgb(197 133 137 / 24%)!important;color:rgb(146 34 42 / 75%)!important;}
+  .ph::before,.ph::after{border-color:rgb(197 133 137 / 24%)!important;border-width:2px!important;}
+  .ph .ph-tag{color:rgba(193,18,31,.6)!important;}
+
+  /* --- 详情小节标头（加粗） --- */
+  .detail-head{border-bottom:2px solid rgba(193,18,31,.25)!important;}
+  .detail-head .t{color:#2a1f1f!important;}
+
+  /* --- 01 雷达 --- */
+  .radar-info p{color:#6a6060!important;}
+  .ri-bars{background:rgba(193,18,31,.04)!important;border:2px solid rgba(193,18,31,.18)!important;}
+  .ri-bar{border-bottom:2px dashed rgba(193,18,31,.12)!important;}
+  .ri-bar:last-child{border-bottom:0!important;}
+  .ri-bar .lb{color:#3d3535!important;}
+  .ri-bar .track{background:rgba(0,0,0,.06)!important;}
+  .ri-bar .fill{background:linear-gradient(90deg,#c1121f,#e0464f)!important;}
+
+  /* --- 02 工具卡片（框线加粗） --- */
+  .tool-card{background:rgba(193,18,31,.04)!important;border:2px solid rgb(197 133 137 / 24%)!important;}
+  .tool-card::after{border:2px solid rgba(193,18,31,.14)!important;}
+  .tool-card:hover{border-color:rgba(193,18,31,.5)!important;box-shadow:0 16px 40px -18px rgba(193,18,31,.2)!important;}
+  .tc-abbr{color:#2a1f1f!important;}
+  .tc-name{color:#444!important;}
+  .tc-tagline{color:#7a7070!important;}
+  .tc-bar-wrap{background:rgba(0,0,0,.06)!important;}
+  .tc-bar{background:linear-gradient(90deg,#c1121f,#e0464f)!important;}
+  .tc-jump{border-top:2px solid rgba(193,18,31,.14)!important;color:#999!important;}
+  .tool-card:hover .tc-jump{color:var(--red)!important;}
+
+  /* --- 工具详情 --- */
+  .tool-detail{border-top:2px dashed rgba(193,18,31,.14)!important;}
+  .tool-detail:first-of-type{border-top:0!important;}
+  .td-abbr{background:repeating-linear-gradient(45deg,#b66268 0 5px,#c06b71 5px 10px)!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;filter:none!important;}
+  .td-zh{color:#2a1f1f!important;}
+  .td-en{color:#999!important;}
+  .td-essence{color:rgba(180,40,50,.75)!important;background:rgb(81 59 61 / 3%)!important;border-left:3px solid #c1121f00!important;}
+  .td-desc{color:#6a6060!important;}
+  .td-caps span{color:#3d3535!important;border-right:2px solid rgb(193 18 31 / 40%)!important;}
+  .td-caps span:last-child{border-right:0!important;}
+  .td-apps span{color:var(--red)!important;background:rgba(193,18,31,.05)!important;border:2px solid rgba(193,18,31,.22)!important;}
+
+  /* --- 03 个人能力卡片（框线加粗） --- */
+  .ps-card{background:rgb(81 59 61 / 3%)!important;border:2px solid rgb(197 133 137 / 24%)!important;}
+  .ps-card:hover{border-color:rgba(193,18,31,.5)!important;}
+  .ps-name{color:#2a1f1f!important;}
+  .ps-tagline{color:#7a7070!important;}
+  .ps-jump{border-top:2px solid rgba(193,18,31,.14)!important;color:#999!important;}
+  .ps-card:hover .ps-jump{color:var(--red)!important;}
+  .ps-detail{border-top:2px dashed rgba(193,18,31,.12)!important;}
+  .ps-detail:first-of-type{border-top:0!important;}
+  .psd-zh{color:#c44a53!important;}
+  .psd-en{color:#999!important;}
+  .psd-essence{color:#2a1f1f!important;background:rgb(81 59 61 / 3%)!important;border-left:3px solid #c1121f00!important;}
+  .psd-desc{color:#6a6060!important;}
+
+  /* --- 项目经历卡片（框线加粗） --- */
+  .proj-cards{border-left:3px solid #c1121f00!important;background:rgba(193,18,31,.04)!important;}
+  .proj-cards::before{color:#c44a53!important;background:rgb(81 59 61 / 3%)!important;}
+  .proj-card{border:2px solid rgba(193,18,31,.18)!important;border-left:0!important;background:rgba(193,18,31,.04)!important;color:rgb(146 34 42 / 75%)!important;}
+  .proj-card:hover{background:rgba(193,18,31,.04)!important;}
+  .proj-card::before{background:rgba(193,18,31,.04)!important;border:2px solid rgb(197 133 137 / 24%)!important;}
+  .proj-card .pc-title{color:#2a1f1f!important;}
+  .proj-card .pc-role{border:2px solid rgb(197 133 137 / 24%)!important;}
+  .proj-card .pc-desc{color:#6a6060!important;}
+
+  /* --- 04 AI 协作（框线加粗） --- */
+  .ai-text p{color:#6a6060!important;}
+  .ai-flow{background:rgba(193,18,31,.03)!important;border:2px solid rgba(193,18,31,.18)!important;}
+  .ai-step{border-right:2px solid rgba(193,18,31,.15)!important;}
+  .ai-step:last-child{border-right:0!important;}
+  .ai-step .s{color:#2a1f1f!important;}
+  .ai-step .d{color:#7a7070!important;}
+
+  /* --- 05 GIS（框线加粗） --- */
+  .gis-side{background:rgba(193,18,31,.03)!important;border:2px solid rgba(193,18,31,.18)!important;}
+  .gis-side .t{color:#2a1f1f!important;}
+  .gis-stat{border-bottom:2px dashed rgba(193,18,31,.12)!important;}
+  .gis-stat:last-child{border-bottom:0!important;}
+  .gis-stat .nm{color:#4a4040!important;}
+  .gis-stat .bar{background:rgba(0,0,0,.06)!important;}
+  .gis-stat .bar i{background:linear-gradient(90deg,#c1121f,#e0464f)!important;}
+
+  /* --- 06 方法论（框线加粗） --- */
+  .method-card{background:rgba(255,245,243,.9)!important;border:2px solid rgba(193,18,31,.18)!important;}
+  .method-card:hover{border-color:rgba(193,18,31,.5)!important;}
+  .mc-no{color:rgba(193,18,31,.12)!important;}
+  .mc-title{color:#2a1f1f!important;}
+  .mc-en{color:#999!important;}
+  .mc-desc{color:#6a6060!important;}
+
+  /* --- 章节快速跳转（框线加粗） --- */
+  .sk-quicknav{background:rgba(193,18,31,.03)!important;border:2px solid rgba(193,18,31,.16)!important;}
+  .sk-quicknav a{color:#888!important;border-right:2px solid rgba(193,18,31,.12)!important;}
+  .sk-quicknav a:last-child{border-right:0!important;}
+  .sk-quicknav a:hover{color:#2a1f1f!important;background:rgba(193,18,31,.06)!important;}
+  .sk-quicknav a.qn-current{color:#2a1f1f!important;background:rgba(193,18,31,.08)!important;}
+
+  /* --- 底部分区导航（框线加粗） --- */
+  .sec-nav{background:rgba(255,254,247,.96)!important;backdrop-filter:blur(14px)!important;border-top:3px solid rgba(193,18,31,.2)!important;box-shadow:0 -4px 20px rgba(0,0,0,.04)!important;}
+  .sn{color:#888!important;border-right:2px solid rgba(193,18,31,.12)!important;}
+  .sn:last-child{border-right:0!important;}
+  .sn:hover{color:#2a1f1f!important;background:rgba(193,18,31,.05)!important;}
+  .sn.active{color:#c1121f!important;background:rgba(193,18,31,.06)!important;border-top:3px solid var(--red)!important;margin-top:-3px!important;}
+  .sn-hint{color:#fff!important;background:var(--red)!important;border-right:2px solid rgba(193,18,31,.3)!important;}
+
+  /* --- 左侧返回按钮 --- */
+  .back-btn{background:linear-gradient(90deg,#fff 0%,#fff5f3 34%,#f5d5d3 82%,#c1121f 100%)!important;box-shadow:0 14px 34px -10px rgba(193,18,31,.2)!important;}
+  .back-btn .bb-label{color:#2a1f1f!important;text-shadow:none!important;}
+  .back-btn .bb-circle{background:radial-gradient(circle at 50% 45%,#c1121f,#9a0e18)!important;box-shadow:0 0 22px rgba(193,18,31,.35)!important;}
+  .back-btn .bb-circle svg{stroke:#fff!important;}
+
+  /* --- 页脚：与首页保持一致，不覆盖 --- */
+
+  /* --- 响应式补充 --- */
+  @media(max-width:768px){
+    .nav-links{background:rgba(28,23,17,.98)!important;}
+    .ai-step{border-right:0!important;border-bottom:2px solid rgba(193,18,31,.14)!important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/index.html" class="nav-logo">ZHANG <span>YAQI</span></a>
+  <div class="nav-links">
+    <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/portfolio.html">作品</a>
+    <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/skills.html" class="active">能力</a>
+    <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/about.html">关于</a>
+    <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/contact.html">联系</a>
+  </div>
+  <button class="nav-cv" onclick="alert(&#39;简历PDF将在后续上传&#39;)">下载简历</button>
+  <button class="nav-toggle" onclick="toggleMenu(this)" aria-label="菜单">☰</button>
+</nav>
+
+<!-- 左侧返回按钮 -->
+<div class="back-btn" id="backBtn">
+  <span class="bb-label">返回工具总览</span>
+  <span class="bb-circle"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="6"></line><path d="M6 12l6-6 6 6"></path></svg></span>
+</div>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="grid-tex"></div>
+  <div class="ph-inner">
+    <div class="ph-eyebrow">COMPETENCIES</div>
+    <h1 class="ph-title" data-text="能力全景">能力全景</h1>
+    <div class="ph-en">SKILLS &amp; COMPETENCIES</div>
+    <p class="ph-sub">从空间设计到项目策划，从技术实现到团队管理<br>这些能力不止服务于设计，更是可迁移到任何领域的<b style="font-family:var(--cn);font-size:1em;color:#fff">思维、逻辑与效率</b>素养</p>
+
+  </div>
+</header>
+
+<!-- ===== 01 五维能力 ===== -->
+<section class="sk glow-tl" id="sec-01">
+  <div class="sk-inner">
+    <div class="sk-head fade-up visible">
+      
+      <div class="sk-row"><span class="sk-num">01</span><h2 class="sk-title">能力体系</h2></div>
+      <div class="sk-en">Competency Radar</div>
+    </div>
+    <div class="radar-wrap">
+      <div class="radar-chart fade-up visible">
+        <svg viewBox="-70 -15 540 435" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="rgba(0,0,0,.07)" stroke-width="1">
+            <polygon points="200,40 352,151 294,329 106,329 48,151"></polygon>
+            <polygon points="200,72 322,160 275,304 125,304 78,160"></polygon>
+            <polygon points="200,104 291,170 256,278 144,278 109,170"></polygon>
+            <polygon points="200,136 261,180 238,252 162,252 139,180"></polygon>
+          </g>
+          <g stroke="rgba(193,18,31,.15)" stroke-width="1">
+            <line x1="200" y1="200" x2="200" y2="40"></line><line x1="200" y1="200" x2="352" y2="151"></line>
+            <line x1="200" y1="200" x2="294" y2="329"></line><line x1="200" y1="200" x2="106" y2="329"></line>
+            <line x1="200" y1="200" x2="48" y2="151"></line>
+          </g>
+          <polygon points="200,46 341,154 286,317 115,316 57,154" fill="rgba(193,18,31,.26)" stroke="#e0464f" stroke-width="2"></polygon>
+          <g fill="#e0464f">
+            <circle cx="200" cy="46" r="5"></circle><circle cx="341" cy="154" r="5"></circle><circle cx="286" cy="317" r="5"></circle><circle cx="115" cy="316" r="5"></circle><circle cx="57" cy="154" r="5"></circle>
+          </g>
+          <g font-family="&#39;Noto Sans SC&#39;,sans-serif" font-size="15" fill="#3a3535" text-anchor="middle" font-weight="700">
+            <text x="200" y="14">设计力</text>
+            <text x="392" y="148" text-anchor="start">策划力</text>
+            <text x="316" y="362">管理力</text>
+            <text x="84" y="362">技术力</text>
+            <text x="8" y="148" text-anchor="end">创新力</text>
+          </g>
+          <g font-family="Archivo,sans-serif" font-size="17" fill="#e0464f" text-anchor="middle" font-weight="800">
+            <text x="200" y="33">96</text>
+            <text x="392" y="170" text-anchor="start">93</text>
+            <text x="316" y="380">91</text>
+            <text x="84" y="380">90</text>
+            <text x="8" y="170" text-anchor="end">94</text>
+          </g>
+        </svg>
+      </div>
+      <div class="radar-info fade-up visible">
+        <p>经过城乡规划专业的系统训练，以及在多个国家级竞赛中担任组长、主创的实战历练，我在五个维度都建立了扎实而均衡的能力。从前期调研策划，到设计与技术实现，再到汇报与团队协调，每个项目都是综合能力的实践。</p>
+        <div class="ri-bars">
+          <div class="ri-bar"><span class="lb">设计力</span><span class="track"><span class="fill" data-v="96" style="width: 96%;"></span></span><span class="v">96</span></div>
+          <div class="ri-bar"><span class="lb">创新力</span><span class="track"><span class="fill" data-v="94" style="width: 94%;"></span></span><span class="v">94</span></div>
+          <div class="ri-bar"><span class="lb">策划力</span><span class="track"><span class="fill" data-v="93" style="width: 93%;"></span></span><span class="v">93</span></div>
+          <div class="ri-bar"><span class="lb">管理力</span><span class="track"><span class="fill" data-v="91" style="width: 91%;"></span></span><span class="v">91</span></div>
+          <div class="ri-bar"><span class="lb">技术力</span><span class="track"><span class="fill" data-v="90" style="width: 90%;"></span></span><span class="v">90</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 操作工具 ===== -->
+<section class="sk grid-tex" id="sec-02">
+  <div class="sk-inner">
+    <div class="sk-quicknav-tip fade-up visible">点击编号跳转至对应板块</div>
+    <div class="sk-quicknav qn-top fade-up visible">
+      <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-02" class="qn-current"><span class="qn">02</span>操作工具</a>
+      <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-03"><span class="qn">03</span>个人能力</a>
+      <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-04"><span class="qn">04</span>AI 协作</a>
+      <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-05"><span class="qn">05</span>方法论</a>
+    </div>
+    <div class="sk-head fade-up visible" id="tools-top">
+      
+      <div class="sk-row"><span class="sk-num">02</span><h2 class="sk-title">操作工具</h2></div>
+      <div class="sk-en">7 Tools · Cross-field Competencies</div>
+      <p class="sk-desc">每一项工具背后，都是一种可迁移的工作能力——制图的<b>严谨</b>、建模的<b>空间想象</b>、分析的<b>数据理性</b>、表达的<b>审美传达</b>。点击任意工具，直达对应作品与深度说明。</p>
+    </div>
+    <div class="tools-grid" id="toolsGrid">
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-cad" style="transition-delay:0ms">
+   <div class="tc-top"><div class="tc-cat">制图 · DRAFTING</div><div class="tc-abbr">CAD</div></div>
+   <div class="tc-body">
+     <div class="tc-name">AutoCAD</div>
+     <div class="tc-tagline">把构想变成毫米级精确、可施工的标准图纸</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="92" style="width: 92%;"></div></div><span class="tc-pct">92</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-su" style="transition-delay:45ms">
+   <div class="tc-top"><div class="tc-cat">建模 · MODELING</div><div class="tc-abbr">SU</div></div>
+   <div class="tc-body">
+     <div class="tc-name">SketchUp</div>
+     <div class="tc-tagline">在虚拟空间里"立"起方案，多角度推敲空间</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="88" style="width: 88%;"></div></div><span class="tc-pct">88</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-gis" style="transition-delay:90ms">
+   <div class="tc-top"><div class="tc-cat">分析 · ANALYSIS</div><div class="tc-abbr">GIS</div></div>
+   <div class="tc-body">
+     <div class="tc-name">ArcGIS</div>
+     <div class="tc-tagline">用数据说话，把地理信息变成决策依据</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="90" style="width: 90%;"></div></div><span class="tc-pct">90</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-ps" style="transition-delay:135ms">
+   <div class="tc-top"><div class="tc-cat">表现 · VISUAL</div><div class="tc-abbr">PS</div></div>
+   <div class="tc-body">
+     <div class="tc-name">Photoshop</div>
+     <div class="tc-tagline">把方案包装成一目了然、打动人的画面</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="92" style="width: 92%;"></div></div><span class="tc-pct">92</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-ens" style="transition-delay:180ms">
+   <div class="tc-top"><div class="tc-cat">渲染 · RENDER</div><div class="tc-abbr">Ens</div></div>
+   <div class="tc-body">
+     <div class="tc-name">Enscape</div>
+     <div class="tc-tagline">让静态方案变成可沉浸体验的真实场景</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="80" style="width: 80%;"></div></div><span class="tc-pct">80</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="tool-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#t-py" style="transition-delay:225ms">
+   <div class="tc-top"><div class="tc-cat">编程 · CODE</div><div class="tc-abbr">Python</div></div>
+   <div class="tc-body">
+     <div class="tc-name">Python</div>
+     <div class="tc-tagline">用代码爬取数据、自动化重复劳动</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="75" style="width: 75%;"></div></div><span class="tc-pct">75</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a></div>
+    <div class="detail-head fade-up visible"><span class="t">工具作品展示</span><span class="e">TOOL SHOWCASE</span><span class="idx">01—06</span></div>
+    <div id="toolsDetail">
+ <div class="tool-detail " id="t-cad">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">制图 · DRAFTING　|　01 / 06</div>
+     <div class="td-abbr">CAD</div>
+     <div class="td-zh">工程制图</div>
+     <div class="td-en">AUTOCAD · ENGINEERING DRAWING</div>
+     <div class="td-essence">「把抽象构想落实为毫米级精确、可供施工的标准图纸。」</div>
+     <p class="td-desc">制图考验的不只是软件操作，更是严谨的逻辑与系统性思维——每一条线、每一处标注都关乎方案能否准确落地。这种"将模糊想法转化为精确可执行方案"的能力，是任何工程、管理与执行类工作的底层素养。</p>
+     <div class="td-caps"><span>严谨</span><span>规范</span><span>系统执行</span></div>
+     <div class="td-apps"><span>规划总图</span><span>控规图则</span><span>施工图</span><span>节点详图</span></div>
+   </div>
+   <div class="gal g1 fade-up visible">
+     <div class="ph"><span class="ph-tag">CAD</span><img src="./能力全景_浅色版_files/CAD1.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">CAD</span><img src="./能力全景_浅色版_files/CAD2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">CAD</span><img src="./能力全景_浅色版_files/CAD3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div>
+ <div class="tool-detail rev" id="t-su">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">建模 · MODELING　|　02 / 06</div>
+     <div class="td-abbr">SU</div>
+     <div class="td-zh">三维建模</div>
+     <div class="td-en">SKETCHUP · 3D MODELING</div>
+     <div class="td-essence">「在虚拟空间中"立"起方案，多角度推敲空间与体量。」</div>
+     <p class="td-desc">建模是空间想象力的工具化表达，也是快速验证与沟通创意的硬功夫。从二维到三维的转译能力，本质是一种"把抽象概念可视化、让他人快速理解"的沟通效率，可应用于任何需要呈现方案的场景。</p>
+     <div class="td-caps"><span>空间想象</span><span>快速验证</span><span>可视沟通</span></div>
+     <div class="td-apps"><span>方案推敲</span><span>体块研究</span><span>场景搭建</span></div>
+   </div>
+   <div class="gal gsu fade-up visible">
+     <div class="ph"><span class="ph-tag">SU</span><img src="./能力全景_浅色版_files/SU加水印.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">SU</span><img src="./能力全景_浅色版_files/SU2.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">SU</span><img src="./能力全景_浅色版_files/SU3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">SU</span><img src="./能力全景_浅色版_files/SU4.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">SU</span><img src="./能力全景_浅色版_files/SU5.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div>
+ <div class="tool-detail " id="t-gis">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">分析 · ANALYSIS　|　03 / 06</div>
+     <div class="td-abbr">GIS</div>
+     <div class="td-zh">空间分析</div>
+     <div class="td-en">ARCGIS · SPATIAL ANALYSIS</div>
+     <div class="td-essence">「用数据说话，把海量地理信息转化为清晰的决策依据。」</div>
+     <p class="td-desc">GIS 的核心不是画地图，而是"用数据驱动判断"的理性思维。从纷繁数据中提炼规律、支撑决策的能力，可迁移到市场分析、运营优化等几乎所有依赖数据洞察的领域。结合 Python 爬取与处理数据，让分析更高效、更具说服力。</p>
+     <div class="td-caps"><span>数据思维</span><span>理性决策</span><span>高效处理</span></div>
+     <div class="td-apps"><span>用地评价</span><span>生态分析</span><span>可达性建模</span><span>数据爬取</span></div>
+   </div>
+   <div class="gal g2 fade-up visible">
+     <div class="ph"><span class="ph-tag">GIS</span><img src="./能力全景_浅色版_files/GIS2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">GIS</span><img src="./能力全景_浅色版_files/GIS1.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">GIS</span><img src="./能力全景_浅色版_files/GIS3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div>
+ <div class="tool-detail rev" id="t-ps">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">表现 · VISUAL　|　04 / 06</div>
+     <div class="td-abbr">PS</div>
+     <div class="td-zh">视觉表现</div>
+     <div class="td-en">PHOTOSHOP · VISUAL EXPRESSION</div>
+     <div class="td-essence">「把专业方案包装成一目了然、打动人心的画面。」</div>
+     <p class="td-desc">视觉表达是"把复杂事情讲清楚、讲好看"的通用能力。从信息层级到色彩节奏，背后是审美素养与受众思维——让非专业的人也能在三秒内理解你的方案价值。这在汇报、传播、品牌等任何工作中都至关重要。</p>
+     <div class="td-caps"><span>审美素养</span><span>信息传达</span><span>受众思维</span></div>
+     <div class="td-apps"><span>效果图后期</span><span>展板排版</span><span>分析图</span><span>视觉拼贴</span></div>
+   </div>
+   <div class="gal gps fade-up visible">
+     <div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS1.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS2.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS5.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS6.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">PS</span><img src="./能力全景_浅色版_files/PS7.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div>
+ <div class="tool-detail " id="t-ens">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">渲染 · RENDER　|　05 / 06</div>
+     <div class="td-abbr">Ens</div>
+     <div class="td-zh">实时渲染</div>
+     <div class="td-en">ENSCAPE · REAL-TIME RENDER</div>
+     <div class="td-essence">「让静态方案变成可沉浸体验的真实场景，所见即所得。」</div>
+     <p class="td-desc">通过渲染把成果以最直观、最具感染力的方式呈现，让甲方与评委"身临其境"。也是把专业价值有效传递给决策者的桥梁。</p>
+     <div class="td-caps"><span>技术呈现</span><span>沉浸体验</span><span>高效说服</span></div>
+     <div class="td-apps"><span>效果渲染</span><span>动画漫游</span><span>VR 体验</span></div>
+   </div>
+   <div class="gal g1 fade-up visible">
+     <div class="ph"><span class="ph-tag">ENS</span><img src="./能力全景_浅色版_files/效果图1.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">ENS</span><img src="./能力全景_浅色版_files/效果图2.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;margin:auto;"></div><div class="ph"><span class="ph-tag">ENS</span><img src="./能力全景_浅色版_files/效果图3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div>
+ <div class="tool-detail rev" id="t-py">
+   <div class="td-text fade-up visible">
+     <div class="td-eyebrow">编程 · CODE　|　06 / 06</div>
+     <div class="td-abbr">Python</div>
+     <div class="td-zh">编程自动化</div>
+     <div class="td-en">PYTHON · PROGRAMMING</div>
+     <div class="td-essence">「用代码爬取、处理数据，挖掘规律、自动化重复劳动。」</div>
+     <p class="td-desc">用 Python 爬取数据、批量处理、自动化重复工作，与此同时也代表着用工程思维解决问题、把效率提升到新维度。</p>
+     <div class="td-caps"><span>工程思维</span><span>数据爬取</span><span>效率革新</span></div>
+     <div class="td-apps"><span>数据爬取</span><span>批量处理</span><span>自动化</span><span>算法分析</span></div>
+   </div>
+   <div class="gal gpy fade-up visible">
+     <div class="ph"><span class="ph-tag">PYTHON</span><img src="./能力全景_浅色版_files/python.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+   </div>
+ </div></div>
+  </div>
+</section>
+
+<!-- ===== 03 个人能力 ===== -->
+<section class="sk glow-br" id="sec-03">
+  <div class="sk-inner">
+    <div class="sk-head fade-up visible" id="personal-top">
+      
+      <div class="sk-row"><span class="sk-num">03</span><h2 class="sk-title">个人能力</h2></div>
+      <div class="sk-en">Soft Skills &amp; Hand Drawing</div>
+      <p class="sk-desc">除专业软件外，我还具备多项在任何团队中都不可或缺的软实力——<b>演讲、协作、手绘表达</b>。点击任意一项，查看对应的作品图集与说明。</p>
+    </div>
+    <div class="ps-grid" id="psGrid">
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-speak" style="transition-delay:0ms">
+   <div class="ps-top"><div class="ps-cat">软实力 · SOFT</div><div class="ps-name">演讲与协作</div></div>
+   <div class="ps-body">
+     <div class="ps-en">SPEAKING &amp; TEAMWORK</div>
+     <div class="ps-tagline">国家级竞赛主讲 + 团队组长：讲得清、带得动</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-plan" style="transition-delay:55ms">
+   <div class="ps-top"><div class="ps-cat">图纸 · DRAWING</div><div class="ps-name">总平面图</div></div>
+   <div class="ps-body">
+     <div class="ps-en">MASTER PLAN</div>
+     <div class="ps-tagline">把规划构想落成总平面图，统筹布局、交通与尺度</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-aerial" style="transition-delay:110ms">
+   <div class="ps-top"><div class="ps-cat">图纸 · DRAWING</div><div class="ps-name">鸟瞰图</div></div>
+   <div class="ps-body">
+     <div class="ps-en">AERIAL VIEW</div>
+     <div class="ps-tagline">以鸟瞰视角整体呈现方案的空间关系与场所氛围</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-arcdraw" style="transition-delay:165ms">
+   <div class="ps-top"><div class="ps-cat">图纸 · DRAWING</div><div class="ps-name">建筑制图</div></div>
+   <div class="ps-body">
+     <div class="ps-en">ARCHITECTURAL DRAWING</div>
+     <div class="ps-tagline">以精确线条与规范标注传达建筑方案的空间逻辑</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-pen" style="transition-delay:220ms">
+   <div class="ps-top"><div class="ps-cat">手绘 · DRAW</div><div class="ps-name">钢笔画</div></div>
+   <div class="ps-body">
+     <div class="ps-en">PEN DRAWING</div>
+     <div class="ps-tagline">用线条记录空间，训练尺度与光影感知</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a>
+ <a class="ps-card fade-up visible" href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#p-marker" style="transition-delay:275ms">
+   <div class="ps-top"><div class="ps-cat">手绘 · DRAW</div><div class="ps-name">马克笔绘画</div></div>
+   <div class="ps-body">
+     <div class="ps-en">MARKER RENDERING</div>
+     <div class="ps-tagline">快速用色彩与笔触传达空间氛围与意图</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"></line><path d="M6 13l6 6 6-6"></path></svg></div>
+   </div>
+ </a></div>
+    <div class="detail-head fade-up visible"><span class="t">特长详情 · 作品图集</span><span class="e">SHOWCASE</span><span class="idx">01—03</span></div>
+    <div id="psDetail">
+  <div class="ps-detail" id="p-speak">
+    <div class="psd-grid ">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">软实力 · SOFT　|　01 / 06</div>
+        <div class="psd-zh">演讲与协作</div>
+        <div class="psd-en">SPEAKING &amp; TEAMWORK</div>
+        <div class="psd-essence">「多次担任国家级竞赛答辩主讲与团队组长，完成全程路演。」</div>
+        <p class="psd-desc">擅长把复杂方案转化为清晰有力的口头表达，配合精心设计的演示与现场互动；同时作为组长统筹分工、把控进度、协调冲突。胜任公众表达 + 团队领导。</p>
+      </div>
+      <div class="psd-gal fade-up visible"><div class="photos"><div class="ph"><img src="./能力全景_浅色版_files/微信图片_20260607144716_2044_3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><img src="./能力全景_浅色版_files/微信图片_20260607144756_2046_3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><img src="./能力全景_浅色版_files/微信图片_20260607144651_2043_3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph"><img src="./能力全景_浅色版_files/微信图片_20260607144752_2045_3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    <div class="proj-cards fade-up visible">
+      <div class="proj-card">
+        <div class="pc-top"><span class="pc-title">"设计河南·美丽乡村"实战训练营（第三期）</span><span class="pc-role">主创设计师</span><span class="pc-date">2025.12</span></div>
+        <p class="pc-desc">向组委会评委、县局长、镇长、校领导等进行项目汇报答辩，完整经历设计规划类项目全周期——从前期调研、方案设计到最终答辩汇报。</p>
+      </div>
+      <div class="proj-card">
+        <div class="pc-top"><span class="pc-title">第四届全国大学生乡村国土空间价值提升规划设计大赛</span><span class="pc-role">二作</span><span class="pc-date">2026.04</span></div>
+        <p class="pc-desc">面向河南大学、郑州轻工业大学、西北农林科技大学等高校代表及规划领域资深评审专家进行方案路演与答辩，展现国土空间价值提升的规划设计成果，锻炼了跨校际学术交流与高规格汇报能力。</p>
+      </div>
+      <div class="proj-card">
+        <div class="pc-top"><span class="pc-title">第五届印迹乡村创意大赛（河南赛区）</span><span class="pc-role">主创设计师</span><span class="pc-date">2025.08–2025.11</span></div>
+        <p class="pc-desc">作为主创统筹协调 3 人团队，制定进度计划；深入村落开展现场测绘、村民访谈、资源普查；对接企业负责人、村书记等利益相关方，协调设计需求与实施可行性；完成设计方案及展板制作。</p>
+      </div>
+      <div class="proj-card">
+        <div class="pc-top"><span class="pc-title">河南农业大学2026年"挑战杯"创业计划竞赛终审决赛</span><span class="pc-role">团队成员</span><span class="pc-date">2026</span></div>
+        <p class="pc-desc">参与创业计划方案策划与路演答辩，在校级终审决赛中完整呈现商业模式、市场分析与团队运营规划，锻炼了跨学科团队协作与商业化思维表达能力。</p>
+      </div></div>
+  </div>
+  <div class="ps-detail" id="p-plan">
+    <div class="psd-grid psd-stack">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">图纸 · DRAWING　|　02 / 06</div>
+        <div class="psd-zh">总平面图</div>
+        <div class="psd-en">MASTER PLAN</div>
+        <div class="psd-essence">「总平面图是规划设计的核心成果，统筹功能、交通与景观结构。」</div>
+        
+      </div>
+      <div class="psd-gal fade-up visible"><div class="biggrid"><div class="ph ar7016w49"><span class="ph-tag">1/6</span><img src="./能力全景_浅色版_files/总平3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar7016w49"><span class="ph-tag">2/6</span><img src="./能力全景_浅色版_files/总平4.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar7016w44"><span class="ph-tag">3/6</span><img src="./能力全景_浅色版_files/聂庄01.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar7016w44"><span class="ph-tag">4/6</span><img src="./能力全景_浅色版_files/总平5.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar916c"><span class="ph-tag">5/6</span><img src="./能力全景_浅色版_files/总平1.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar916c"><span class="ph-tag">6/6</span><img src="./能力全景_浅色版_files/管城.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    
+  </div>
+  <div class="ps-detail" id="p-aerial">
+    <div class="psd-grid psd-stack">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">图纸 · DRAWING　|　03 / 06</div>
+        <div class="psd-zh">鸟瞰图</div>
+        <div class="psd-en">AERIAL VIEW</div>
+        <div class="psd-essence">「鸟瞰图从整体视角呈现方案的空间结构与场所氛围。」</div>
+        
+      </div>
+      <div class="psd-gal fade-up visible"><div class="biggrid"><div class="ph ar43"><span class="ph-tag">1/3</span><img src="./能力全景_浅色版_files/鸟瞰2.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar43"><span class="ph-tag">2/3</span><img src="./能力全景_浅色版_files/鸟瞰图1.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph ar43"><span class="ph-tag">3/3</span><img src="./能力全景_浅色版_files/鸟瞰3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    
+  </div>
+  <div class="ps-detail" id="p-arcdraw">
+    <div class="psd-grid psd-stack">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">图纸 · DRAWING　|　04 / 06</div>
+        <div class="psd-zh">建筑制图</div>
+        <div class="psd-en">ARCHITECTURAL DRAWING</div>
+        <div class="psd-essence">「建筑制图是将空间构想转化为可读图纸的基本功。」</div>
+        <p class="psd-desc">从平面、立面到剖面，训练对尺度、构造与空间关系的精确表达。每一根线条都要有依据，每一个标注都要能被施工理解。下方为建筑制图作品。</p>
+      </div>
+      <div class="psd-gal fade-up visible"><div class="biggrid"><div class="ph ar916l"><span class="ph-tag">1/1</span><img src="./能力全景_浅色版_files/建筑制图.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    
+  </div>
+  <div class="ps-detail" id="p-pen">
+    <div class="psd-grid ">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">手绘 · DRAW　|　05 / 06</div>
+        <div class="psd-zh">钢笔画</div>
+        <div class="psd-en">PEN DRAWING</div>
+        <div class="psd-essence">「建筑钢笔画是我表达空间思考、记录现场的方式。」</div>
+        <p class="psd-desc">线条的疏密、转折与留白，训练了对尺度与光影的敏锐感知，也是现场调研中最快速的记录工具。</p>
+      </div>
+      <div class="psd-gal fade-up visible"><div class="collage"><div class="ph big"><span class="ph-tag">1/6</span><img src="./能力全景_浅色版_files/钢笔画1.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">2/6</span><img src="./能力全景_浅色版_files/钢笔画3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">3/6</span><img src="./能力全景_浅色版_files/钢笔画4.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph wide"><span class="ph-tag">4/6</span><img src="./能力全景_浅色版_files/钢笔画2.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">5/6</span><img src="./能力全景_浅色版_files/钢笔画5.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">6/6</span><img src="./能力全景_浅色版_files/钢笔画6.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    
+  </div>
+  <div class="ps-detail" id="p-marker">
+    <div class="psd-grid rev">
+      <div class="psd-text fade-up visible">
+        <div class="psd-eyebrow">手绘 · DRAW　|　06 / 06</div>
+        <div class="psd-zh">马克笔绘画</div>
+        <div class="psd-en">MARKER RENDERING</div>
+        <div class="psd-essence">「马克笔快速表现是汇报与现场沟通的利器。」</div>
+        <p class="psd-desc">用色彩与笔触传达空间氛围、材质与设计意图，让受众直观感受方案效果。</p>
+      </div>
+      <div class="psd-gal fade-up visible"><div class="collage"><div class="ph big"><span class="ph-tag">1/6</span><img src="./能力全景_浅色版_files/色彩1.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">2/6</span><img src="./能力全景_浅色版_files/色彩3.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">3/6</span><img src="./能力全景_浅色版_files/色彩4.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph wide"><span class="ph-tag">4/6</span><img src="./能力全景_浅色版_files/色彩2.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">5/6</span><img src="./能力全景_浅色版_files/色彩5.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div><div class="ph "><span class="ph-tag">6/6</span><img src="./能力全景_浅色版_files/色彩6.jpg" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div></div></div>
+    </div>
+    
+  </div></div>
+  </div>
+</section>
+
+
+
+<!-- ===== 04 AI 协作 ===== -->
+<section class="sk grid-tex" id="sec-04">
+  <div class="sk-inner">
+    <div class="sk-head fade-up visible">
+      
+      <div class="sk-row"><span class="sk-num">04</span><h2 class="sk-title">AI 协作设计探索</h2></div>
+      <div class="sk-en">Human × AI Workflow</div>
+    </div>
+    <div class="ai-wrap fade-up visible">
+      <div class="ai-text">
+        <p>我积极探索把 AI 工具融入工作流。从概念意向生成，到文本推敲，再到批量生成场景——AI 不是替代人，而是放大创造力与效率的倍增器。这种"人机协作"的能力，在工作中日益重要。</p>
+        <div class="ai-block">
+          <div class="h">应用场景</div>
+          <p>概念意向快速生成 · 场景效果辅助渲染 · 方案文本智能优化 · 数据分析与可视化辅助 · 展板排版灵感参考。</p>
+        </div>
+      </div>
+      <div class="ph ai-g-before"><span class="ph-tag">BEFORE</span><img src="./能力全景_浅色版_files/AI1.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+      <div class="ph ai-g-concept"><span class="ph-tag">CONCEPT</span><img src="./能力全景_浅色版_files/AI2.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+      <div class="ph ai-g-render"><span class="ph-tag">RENDER</span><img src="./能力全景_浅色版_files/AI3.png" style="position:absolute;inset:0;width:95%;height:95%;object-fit:contain;margin:auto;"></div>
+    </div>
+    <div class="ai-flow fade-up visible">
+      <div class="ai-step"><div class="n">STEP 01</div><div class="s">Prompt 工程</div><div class="d">精准描述需求，定义风格与约束</div></div>
+      <div class="ai-step"><div class="n">STEP 02</div><div class="s">AI 初稿</div><div class="d">批量生成方向与意向草稿</div></div>
+      <div class="ai-step"><div class="n">STEP 03</div><div class="s">人工精修</div><div class="d">人的判断把控，筛选与深化</div></div>
+      <div class="ai-step"><div class="n">STEP 04</div><div class="s">设计融合</div><div class="d">融入方案，形成最终成果</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 05 方法论 ===== -->
+<section class="sk" id="sec-05">
+  <div class="sk-inner">
+    <div class="sk-head fade-up visible">
+      
+      <div class="sk-row"><span class="sk-num">05</span><h2 class="sk-title">方法论沉淀</h2></div>
+      <div class="sk-en">Reusable Thinking Frameworks</div>
+      <p class="sk-desc">多在个项目实践中，我提炼出了一套可复用的思考框架——这是经过验证的工作方法，同样适用于其他领域的复杂问题。</p>
+    </div>
+    <div class="method-grid fade-up visible">
+      <div class="method-card">
+        <div class="mc-no">01</div>
+        <div class="mc-tagcn">数据决策</div>
+        <div class="mc-title">数据驱动设计</div>
+        <div class="mc-en">Data-Driven</div>
+        <p class="mc-desc">用数据作为决策起点而非主观经验。从定量分析中发现问题、验证方案，让每个判断都有据可依。量化指标贯穿"现状诊断—方案比选—效果评估"全流程。</p>
+      </div>
+      <div class="method-card">
+        <div class="mc-no">02</div>
+        <div class="mc-tagcn">多方共创</div>
+        <div class="mc-title">参与式规划</div>
+        <div class="mc-en">Participatory</div>
+        <p class="mc-desc">好的方案不是独角戏。通过问卷访谈、工作坊、利益相关者会议，让使用者的声音成为方案核心输入。在国空价值与印迹乡村项目中深度实践。</p>
+      </div>
+      <div class="method-card">
+        <div class="mc-no">03</div>
+        <div class="mc-tagcn">人机协同</div>
+        <div class="mc-title">AI 增强工作流</div>
+        <div class="mc-en">AI-Augmented</div>
+        <p class="mc-desc">把 AI 嵌入流程每个环节——调研用 AI 加速文献综述，设计用 AI 生成概念，汇报用 AI 优化表达。人机协作，效率与质量兼得。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 底部分区导航 -->
+<div class="sec-nav" id="secNav">
+  <span class="sn-hint">点击跳转</span>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-01" class="sn" data-sec="sec-01"><span class="sn-n">01</span>五维能力</a>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-02" class="sn" data-sec="sec-02"><span class="sn-n">02</span>操作工具</a>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-03" class="sn" data-sec="sec-03"><span class="sn-n">03</span>个人能力</a>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-04" class="sn" data-sec="sec-04"><span class="sn-n">04</span>AI 协作</a>
+  <a href="file:///D:/hhha/%E4%BD%9C%E5%93%81%E9%9B%86/%E6%8F%92%E5%9B%BE/%E8%83%BD%E5%8A%9B%E5%85%A8%E6%99%AF_%E6%B5%85%E8%89%B2%E7%89%88.html#sec-05" class="sn" data-sec="sec-05"><span class="sn-n">05</span>方法论</a>
+</div>
+
+<!-- 页脚 -->
+<footer>
+  <div class="footer-cta">
+    <div class="line">期待与您共同创造更好的城市空间</div>
+    <div class="sub">Let's build better spaces together</div>
+  </div>
+  <div class="footer-contact">
+    <div class="fc-item">
+      <div class="ic">☎</div>
+      <div class="lb">PHONE</div>
+      <div class="vl">19712700761</div>
+    </div>
+    <div class="fc-item">
+      <div class="ic">✉</div>
+      <div class="lb">EMAIL</div>
+      <div class="vl">19712700761@163.com</div>
+    </div>
+    <div class="fc-item">
+      <div class="ic">💬</div>
+      <div class="lb">WECHAT</div>
+      <div class="vl">wxid_bo4kz60kzvnk22</div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="copyright-zh">
+      <strong>© 2026 张雅琦 版权所有</strong><br>
+      本网站所有内容（包括但不限于设计作品、图片、文字、排版）均为原创作品，受中华人民共和国著作权法保护。<br>
+      未经本人书面授权，任何个人或组织不得以任何形式转载、复制、引用或用于商业用途。
+    </div>
+    <div class="copyright-en">
+      © 2026 Zhang Yaqi. All rights reserved. All content is original work protected by copyright law.<br>
+      Unauthorized reproduction, distribution or commercial use is strictly prohibited.
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  var links=document.querySelector('.nav-links');
+  links.classList.toggle('open');
+  btn.innerHTML=links.classList.contains('open')?'&#10005;':'&#9776;';
+}
+
+const tools=[
+ {id:'cad',abbr:'CAD',name:'AutoCAD',cat:'制图 · DRAFTING',zh:'工程制图',en:'AUTOCAD · ENGINEERING DRAWING',pct:92,
+  tag:'把构想变成毫米级精确、可施工的标准图纸',
+  essence:'把抽象构想落实为毫米级精确、可供施工的标准图纸。',
+  desc:'制图考验的不只是软件操作，更是严谨的逻辑与系统性思维——每一条线、每一处标注都关乎方案能否准确落地。这种"将模糊想法转化为精确可执行方案"的能力，是任何工程、管理与执行类工作的底层素养。',
+  caps:['严谨','规范','系统执行'],apps:['规划总图','控规图则','施工图','节点详图'],shots:['总平面制图','控规图则','节点大样']},
+ {id:'su',abbr:'SU',name:'SketchUp',cat:'建模 · MODELING',zh:'三维建模',en:'SKETCHUP · 3D MODELING',pct:88,
+  tag:'在虚拟空间里"立"起方案，多角度推敲空间',
+  essence:'在虚拟空间中"立"起方案，多角度推敲空间与体量。',
+  desc:'建模是空间想象力的工具化表达，也是快速验证与沟通创意的硬功夫。从二维到三维的转译能力，本质是一种"把抽象概念可视化、让他人快速理解"的沟通效率，可应用于任何需要呈现方案的场景。',
+  caps:['空间想象','快速验证','可视沟通'],apps:['方案推敲','体块研究','场景搭建'],shots:['体块模型','空间推敲','场景建模','方案推敲','场景搭建']},
+ {id:'gis',abbr:'GIS',name:'ArcGIS',cat:'分析 · ANALYSIS',zh:'空间分析',en:'ARCGIS · SPATIAL ANALYSIS',pct:90,
+  tag:'用数据说话，把地理信息变成决策依据',
+  essence:'用数据说话，把海量地理信息转化为清晰的决策依据。',
+  desc:'GIS 的核心不是画地图，而是"用数据驱动判断"的理性思维。从纷繁数据中提炼规律、支撑决策的能力，可迁移到市场分析、运营优化等几乎所有依赖数据洞察的领域。结合 Python 爬取与处理数据，让分析更高效、更具说服力。',
+  caps:['数据思维','理性决策','高效处理'],apps:['用地评价','生态分析','可达性建模','数据爬取'],shots:['用地适宜性','生态敏感性','可达性建模']},
+ {id:'ps',abbr:'PS',name:'Photoshop',cat:'表现 · VISUAL',zh:'视觉表现',en:'PHOTOSHOP · VISUAL EXPRESSION',pct:92,
+  tag:'把方案包装成一目了然、打动人的画面',
+  essence:'把专业方案包装成一目了然、打动人心的画面。',
+  desc:'视觉表达是"把复杂事情讲清楚、讲好看"的通用能力。从信息层级到色彩节奏，背后是审美素养与受众思维——让非专业的人也能在三秒内理解你的方案价值。这在汇报、传播、品牌等任何工作中都至关重要。',
+  caps:['审美素养','信息传达','受众思维'],apps:['效果图后期','展板排版','分析图','视觉拼贴'],shots:['效果图后期','展板版面','分析图示','视觉拼贴','海报设计','氛围合成']},
+ {id:'ens',abbr:'Ens',name:'Enscape',cat:'渲染 · RENDER',zh:'实时渲染',en:'ENSCAPE · REAL-TIME RENDER',pct:80,
+  tag:'让静态方案变成可沉浸体验的真实场景',
+  essence:'让静态方案变成可沉浸体验的真实场景，所见即所得。',
+  desc:'渲染是用技术放大说服力的能力。把成果以最直观、最具感染力的方式呈现，让甲方与评委"身临其境"——这是把专业价值有效传递给决策者的桥梁。',
+  caps:['技术呈现','沉浸体验','高效说服'],apps:['效果渲染','动画漫游','VR 体验'],shots:['实时渲染','漫游动画','沉浸场景']},
+ {id:'py',abbr:'Python',name:'Python',cat:'编程 · CODE',zh:'编程自动化',en:'PYTHON · PROGRAMMING',pct:75,
+  tag:'用代码爬取数据、自动化重复劳动',
+  essence:'用代码爬取、处理数据，挖掘规律、自动化重复劳动。',
+  desc:'编程代表着在数字时代主动驾驭技术、而非被动使用工具的能力。我用 Python 爬取数据、批量处理、自动化重复工作——这种"用工程思维解决问题、把效率提升到新维度"的能力，正成为各行业的稀缺素养。',
+  caps:['工程思维','数据爬取','效率革新'],apps:['数据爬取','批量处理','自动化','算法分析'],shots:['数据爬取']},
+];
+
+document.getElementById('toolsGrid').innerHTML=tools.map((t,i)=>`
+ <a class="tool-card fade-up" href="#t-${t.id}" style="transition-delay:${i*45}ms">
+   <div class="tc-top"><div class="tc-cat">${t.cat}</div><div class="tc-abbr">${t.abbr}</div></div>
+   <div class="tc-body">
+     <div class="tc-name">${t.name}</div>
+     <div class="tc-tagline">${t.tag}</div>
+     <div class="tc-bar-row"><div class="tc-bar-wrap"><div class="tc-bar" data-pct="${t.pct}"></div></div><span class="tc-pct">${t.pct}</span></div>
+     <div class="tc-jump"><span style="color:#ff888f">点击</span>查看作品<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"/><path d="M6 13l6 6 6-6"/></svg></div>
+   </div>
+ </a>`).join('');
+
+const gLayouts=['g1','gsu','g2','gps','g1','gpy'];
+document.getElementById('toolsDetail').innerHTML=tools.map((t,i)=>`
+ <div class="tool-detail ${i%2===1?'rev':''}" id="t-${t.id}">
+   <div class="td-text fade-up">
+     <div class="td-eyebrow">${t.cat}　|　0${i+1} / 06</div>
+     <div class="td-abbr">${t.abbr}</div>
+     <div class="td-zh">${t.zh}</div>
+     <div class="td-en">${t.en}</div>
+     <div class="td-essence">「${t.essence}」</div>
+     <p class="td-desc">${t.desc}</p>
+     <div class="td-caps">${t.caps.map(c=>`<span>${c}</span>`).join('')}</div>
+     <div class="td-apps">${t.apps.map(a=>`<span>${a}</span>`).join('')}</div>
+   </div>
+   <div class="gal ${gLayouts[i]} fade-up">
+     ${t.shots.map(s=>`<div class="ph"><span class="ph-tag">${t.abbr.toUpperCase()}</span>${s}占位</div>`).join('')}
+   </div>
+ </div>`).join('');
+
+const personals=[
+ {id:'speak',name:'演讲与协作',en:'SPEAKING & TEAMWORK',cat:'软实力 · SOFT',
+  tag:'国家级竞赛主讲 + 团队组长：讲得清、带得动',
+  essence:'多次担任国家级竞赛答辩主讲与团队组长，完成全程路演。',
+  desc:'擅长把复杂方案转化为清晰有力的口头表达，配合精心设计的演示与现场互动；同时作为组长统筹分工、把控进度、协调冲突。公众表达 + 团队领导，是任何岗位都珍视的核心软实力。',
+  type:'photos',shots:['答辩现场','团队协作','路演汇报','现场调研'],
+  projects:[
+    {t:'"设计河南·美丽乡村"实战训练营（第三期）',r:'主创设计师',d:'2025.12',
+     p:'向组委会评委、县局长、镇长、校领导等进行项目汇报答辩，完整经历设计规划类项目全周期——从前期调研、方案设计到最终答辩汇报。'},
+    {t:'第四届全国大学生乡村国土空间价值提升规划设计大赛',r:'二作',d:'2026.04',
+     p:'面向河南大学、郑州轻工业大学、西北农林科技大学等高校代表及规划领域资深评审专家进行方案路演与答辩，展现国土空间价值提升的规划设计成果，锻炼了跨校际学术交流与高规格汇报能力。'},
+    {t:'第五届印迹乡村创意大赛（河南赛区）',r:'主创设计师',d:'2025.08–2025.11',
+     p:'作为主创统筹协调 3 人团队，制定进度计划；深入村落开展现场测绘、村民访谈、资源普查；对接企业负责人、村书记等利益相关方，协调设计需求与实施可行性；完成设计方案及展板制作。'},
+    {t:'河南农业大学2026年"挑战杯"创业计划竞赛终审决赛',r:'团队成员',d:'2026',
+     p:'参与创业计划方案策划与路演答辩，在校级终审决赛中完整呈现商业模式、市场分析与团队运营规划，锻炼了跨学科团队协作与商业化思维表达能力。'}
+  ]},
+ {id:'plan',name:'总平面图',en:'MASTER PLAN',cat:'图纸 · DRAWING',
+  tag:'把规划构想落成总平面图，统筹布局、交通与尺度',
+  essence:'总平面图是规划设计的核心成果，统筹功能、交通与景观结构。',
+  desc:'下方为总平面图作品图集（大图占位）——含分区结构、功能结构、局部放大、全彩与线稿。',
+  type:'big',shots:[{t:'分区平面',ar:'ar7016w49'},{t:'功能结构',ar:'ar7016w49'},{t:'局部放大',ar:'ar7016w44'},{t:'节点平面',ar:'ar7016w44'},{t:'总平 · 全彩',ar:'ar916c'},{t:'总平 · 线稿',ar:'ar916c'}]},
+ {id:'aerial',name:'鸟瞰图',en:'AERIAL VIEW',cat:'图纸 · DRAWING',
+  tag:'以鸟瞰视角整体呈现方案的空间关系与场所氛围',
+  essence:'鸟瞰图从整体视角呈现方案的空间结构与场所氛围。',
+  desc:'下方为鸟瞰图作品图集（大图占位）——整体全景与局部视角。',
+  type:'big',shots:[{t:'鸟瞰 · 全景',ar:'ar43'},{t:'鸟瞰 · 局部',ar:'ar43'},{t:'鸟瞰 · 黄昏',ar:'ar43'}]},
+ {id:'arcdraw',name:'建筑制图',en:'ARCHITECTURAL DRAWING',cat:'图纸 · DRAWING',
+  tag:'以精确线条与规范标注传达建筑方案的空间逻辑',
+  essence:'建筑制图是将空间构想转化为可读图纸的基本功。',
+  desc:'从平面、立面到剖面，训练对尺度、构造与空间关系的精确表达。每一根线条都要有依据，每一个标注都要能被施工理解。下方为建筑制图作品（大图占位）。',
+  type:'big',shots:[{t:'建筑制图 · 全幅',ar:'ar916l'}]},
+ {id:'pen',name:'钢笔画',en:'PEN DRAWING',cat:'手绘 · DRAW',
+  tag:'用线条记录空间，训练尺度与光影感知',
+  essence:'建筑钢笔画是我表达空间思考、记录现场的方式。',
+  desc:'线条的疏密、转折与留白，训练了对尺度与光影的敏锐感知，也是现场调研中最快速的记录工具。下方为钢笔画作品图集。',
+  type:'collage',shots:['钢笔画 · 建筑','钢笔画 · 街景','钢笔画 · 速写','钢笔画 · 节点','钢笔画 · 庭院','钢笔画 · 写生']},
+ {id:'marker',name:'马克笔绘画',en:'MARKER RENDERING',cat:'手绘 · DRAW',
+  tag:'快速用色彩与笔触传达空间氛围与意图',
+  essence:'马克笔快速表现是汇报与现场沟通的利器。',
+  desc:'短时间内用色彩与笔触传达空间氛围、材质与设计意图，让受众直观感受方案效果。下方为马克笔作品图集。',
+  type:'collage',shots:['马克笔 · 鸟瞰','马克笔 · 透视','马克笔 · 景观','马克笔 · 立面','马克笔 · 庭院','马克笔 · 概念']},
+];
+
+document.getElementById('psGrid').innerHTML=personals.map((p,i)=>`
+ <a class="ps-card fade-up" href="#p-${p.id}" style="transition-delay:${i*55}ms">
+   <div class="ps-top"><div class="ps-cat">${p.cat}</div><div class="ps-name">${p.name}</div></div>
+   <div class="ps-body">
+     <div class="ps-en">${p.en}</div>
+     <div class="ps-tagline">${p.tag}</div>
+     <div class="ps-jump">查看图集<svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="19"/><path d="M6 13l6 6 6-6"/></svg></div>
+   </div>
+ </a>`).join('');
+
+document.getElementById('psDetail').innerHTML=personals.map((p,i)=>{
+  let gallery;
+  if(p.type==='collage'){
+    const cls=['big','','','wide','',''];
+    gallery=`<div class="collage">${p.shots.map((s,j)=>`<div class="ph ${cls[j]||''}"><span class="ph-tag">${j+1}/${p.shots.length}</span>${s}占位</div>`).join('')}</div>`;
+  }else if(p.type==='big'){
+    gallery=`<div class="biggrid">${p.shots.map((s,j)=>`<div class="ph ${s.ar}"><span class="ph-tag">${j+1}/${p.shots.length}</span>${s.t}占位</div>`).join('')}</div>`;
+  }else{
+    gallery=`<div class="photos">${p.shots.map(s=>`<div class="ph"><span class="ph-tag">PHOTO</span>${s}占位</div>`).join('')}</div>`;
+  }
+  return `
+  <div class="ps-detail" id="p-${p.id}">
+    <div class="psd-grid ${p.type==='big'?'psd-stack':(i%2===1?'rev':'')}">
+      <div class="psd-text fade-up">
+        <div class="psd-eyebrow">${p.cat}　|　0${i+1} / 06</div>
+        <div class="psd-zh">${p.name}</div>
+        <div class="psd-en">${p.en}</div>
+        <div class="psd-essence">「${p.essence}」</div>
+        <p class="psd-desc">${p.desc}</p>
+      </div>
+      <div class="psd-gal fade-up">${gallery}</div>
+    </div>
+    ${p.projects?`<div class="proj-cards fade-up">${p.projects.map(pj=>`
+      <div class="proj-card">
+        <div class="pc-top"><span class="pc-title">${pj.t}</span><span class="pc-role">${pj.r}</span><span class="pc-date">${pj.d}</span></div>
+        <p class="pc-desc">${pj.p}</p>
+      </div>`).join('')}</div>`:''}
+  </div>`;
+}).join('');
+
+/* 滚动入场 */
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+/* 进度条动画 */
+function animBars(sel,attr){
+  document.querySelectorAll(sel).forEach(bar=>{
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){bar.style.width=bar.dataset[attr]+'%';io.unobserve(bar);}});},{threshold:.3});
+    io.observe(bar);
+  });
+}
+setTimeout(()=>{animBars('.ri-bar .fill','v');animBars('.tc-bar','pct');},200);
+
+/* 左侧返回按钮（上下文切换） */
+const backBtn=document.getElementById('backBtn');
+const bbLabel=backBtn.querySelector('.bb-label');
+const zones=[
+  {detail:'toolsDetail',top:'tools-top',label:'返回工具总览'},
+  {detail:'psDetail',top:'personal-top',label:'返回能力总览'},
+];
+let curTarget=null;
+function updateBack(){
+  const mid=window.scrollY+window.innerHeight/2;
+  let active=null;
+  zones.forEach(z=>{
+    const el=document.getElementById(z.detail);if(!el)return;
+    const top=el.getBoundingClientRect().top+window.scrollY;
+    const bottom=top+el.offsetHeight;
+    if(mid>=top&&mid<=bottom)active=z;
+  });
+  if(active){backBtn.classList.add('show');bbLabel.textContent=active.label;curTarget=active.top;}
+  else{backBtn.classList.remove('show');curTarget=null;}
+}
+backBtn.addEventListener('click',()=>{const t=document.getElementById(curTarget);if(t)t.scrollIntoView({behavior:'smooth'});});
+window.addEventListener('scroll',updateBack,{passive:true});
+window.addEventListener('resize',updateBack);
+updateBack();
+
+
+/* 底部分区导航：滚动追踪当前区块 */
+const secIds=['sec-01','sec-02','sec-03','sec-04','sec-05'];
+const snLinks=document.querySelectorAll('.sn');
+function updateSecNav(){
+  const scrollY=window.scrollY+window.innerHeight/3;
+  let cur='';
+  secIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.getBoundingClientRect().top+window.scrollY<=scrollY)cur=id;
+  });
+  snLinks.forEach(a=>{a.classList.toggle('active',a.dataset.sec===cur);});
+}
+window.addEventListener('scroll',updateSecNav,{passive:true});
+updateSecNav();
+/* 点击底部 01-06 平滑跳转到对应分区（在沙盒预览中也可靠生效） */
+snLinks.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const el=document.getElementById(a.dataset.sec);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+</script>
+
+
+</body></html>
